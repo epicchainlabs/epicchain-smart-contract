@@ -1,5 +1,5 @@
-﻿using Neo;
-using Neo.Wallets;
+﻿using EpicChain;
+using EpicChain.Wallets;
 using System;
 using System.Linq;
 
@@ -9,7 +9,7 @@ namespace Tools
     {
         static void Main(string[] args)
         {
-            var sh = "NfKA6zAixybBHHpmaPYPDywoqDaKzfMPf9".ToScriptHash();
+            var sh = "XrTATFdLEVbbcAwfiQZF7qqLHMfWPa3XxA".ToScriptHash();
             var be = sh.ToString();
             var le = be.Remove(0, 2).HexToBytes().Reverse().ToArray().ToHexString();
 
