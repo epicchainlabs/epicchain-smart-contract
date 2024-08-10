@@ -1,6 +1,6 @@
-using Neo.SmartContract.Framework;
-using Neo.SmartContract.Framework.Services.Neo;
-using Neo.SmartContract.Framework.Services.System;
+using EpicChain.SmartContract.Framework;
+using EpicChain.SmartContract.Framework.Services.EpicChain;
+using EpicChain.SmartContract.Framework.Services.System;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

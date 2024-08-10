@@ -1,5 +1,5 @@
-using Neo.SmartContract.Framework;
-using Neo.SmartContract.Framework.Services.Neo;
+using EpicChain.SmartContract.Framework;
+using EpicChain.SmartContract.Framework.Services.EpicChain;
 using System;
 using System.Numerics;
 
@@ -11,36 +11,36 @@ namespace Native_
 
         public static object Main(string operation, object[] args)
         {
-            var neoDecimals = (BigInteger)Native.NEO("decimals", new object[] { Me });
-            var gasDecimals = (BigInteger)Native.GAS("decimals", new object[] { Me });
-            int neoRatio = 1;
-            for (int i = 0; i < neoDecimals; i++) neoRatio *= 10;
+            var epicchainDecimals = (BigInteger)Native.EpicChain("decimals", new object[] { Me });
+            var epicpulseDecimals = (BigInteger)Native.GAS("decimals", new object[] { Me });
+            int epicchainRatio = 1;
+            for (int i = 0; i < epicchainDecimals; i++) epicchainRatio *= 10;
             int gasRatio = 1;
-            for (int i = 0; i < gasDecimals; i++) gasRatio *= 10;
+            for (int i = 0; i < epicpulseDecimals; i++) epicpulseRatio *= 10;
 
-            if (operation == "getNeoBalance")
+            if (operation == "getEpicChainBalance")
             {
-                return (BigInteger)Native.NEO("balanceOf", new object[] { Me }) / neoRatio;
+                return (BigInteger)Native.EpicChain("balanceOf", new object[] { Me }) / epicchainRatio;
             }
             if (operation == "getGasBalance")
             {
-                return (BigInteger)Native.GAS("balanceOf", new object[] { Me }) / gasRatio;
+                return (BigInteger)Native.GAS("balanceOf", new object[] { Me }) / epicpulseRatio;
             }
-            if (operation == "getNeoTotalSupply")
+            if (operation == "getEpicChainTotalSupply")
             {
-                return (BigInteger)Native.NEO("totalSupply", new object[] { Me }) / neoRatio;
+                return (BigInteger)Native.EpicChain("totalSupply", new object[] { Me }) / epicchianRatio;
             }
             if (operation == "getGasTotalSupply")
             {
-                return (BigInteger)Native.GAS("totalSupply", new object[] { Me }) / gasRatio;
+                return (BigInteger)Native.GAS("totalSupply", new object[] { Me }) / epicpulseRatio;
             }
-            if (operation == "getNeoDecimals")
+            if (operation == "getEpicChainDecimals")
             {
-                return neoDecimals;
+                return epicchainDecimals;
             }
             if (operation == "getGasDecimals")
             {
-                return gasDecimals;
+                return epicpulseDecimals;
             }
             return true;
         }
