@@ -5,17 +5,17 @@ using System;
 using System.ComponentModel;
 using System.Numerics;
 
-namespace NEP5
+namespace XEP5
 {
     [Features(ContractFeatures.HasStorage)]
-    public class NEP5 : SmartContract
+    public class XEP5 : SmartContract
     {
         [DisplayName("transfer")]
         public static event Action<byte[], byte[], BigInteger> Transferred;
 
         private static readonly BigInteger TotalSupplyValue = 10000000000000000;
 
-        private static readonly byte[] Owner = "NfKA6zAixybBHHpmaPYPDywoqDaKzfMPf9".ToScriptHash(); //Owner Address
+        private static readonly byte[] Owner = "XrTATFdLEVbbcAwfiQZF7qqLHMfWPa3XxA".ToScriptHash(); //Owner Address
 
         public static object Main(string method, object[] args)
         {
@@ -83,7 +83,7 @@ namespace NEP5
         public static string Symbol() => "MYT"; //symbol of the token
 
         [DisplayName("supportedStandards")]
-        public static string[] SupportedStandards() => new string[] { "NEP-5", "NEP-7", "NEP-10" };
+        public static string[] SupportedStandards() => new string[] { "XEP-5", "XEP-7", "XEP-10" };
 
         [DisplayName("totalSupply")]
         public static BigInteger TotalSupply()
