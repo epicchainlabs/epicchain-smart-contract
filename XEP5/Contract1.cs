@@ -1,6 +1,6 @@
-using Neo.SmartContract.Framework;
-using Neo.SmartContract.Framework.Services.Neo;
-using Neo.SmartContract.Framework.Services.System;
+using EpicChain.SmartContract.Framework;
+using EpicChain.SmartContract.Framework.Services.EpicChain;
+using EpicChain.SmartContract.Framework.Services.System;
 using System;
 using System.ComponentModel;
 using System.Numerics;
@@ -50,7 +50,7 @@ namespace NEP5
         public static bool Deploy()
         {
             if (TotalSupply() != 0) return false;
-            StorageMap contract = Storage.CurrentContext.CreateMap(nameof(contract)); //Storage Map ²»ÄÜ·ÅÔÚÈ«¾Ö±äÁ¿£¬·ñÔòµ÷ÓÃºÏÔ¼»áÊ§°Ü£¬Ò²ÐíÊÇ Bug
+            StorageMap contract = Storage.CurrentContext.CreateMap(nameof(contract)); //Storage Map ï¿½ï¿½ï¿½Ü·ï¿½ï¿½ï¿½È«ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãºï¿½Ô¼ï¿½ï¿½Ê§ï¿½Ü£ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ Bug
             contract.Put("totalSupply", TotalSupplyValue);
             StorageMap asset = Storage.CurrentContext.CreateMap(nameof(asset));
             asset.Put(Owner, TotalSupplyValue);
