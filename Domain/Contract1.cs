@@ -1,5 +1,5 @@
-using Neo.SmartContract.Framework;
-using Neo.SmartContract.Framework.Services.Neo;
+using EpicChain.SmartContract.Framework;
+using EpicChain.SmartContract.Framework.Services.EpicChain;
 using System.ComponentModel;
 
 namespace Domain
