@@ -12,8 +12,8 @@
   </Target>
 
   <ItemGroup>
-    <Reference Include="Neo.SmartContract.Framework">
-      <HintPath>Neo.SmartContract.Framework.dll</HintPath>
+    <Reference Include="EpicChainSmartContract.Framework">
+      <HintPath>EpicChainSmartContract.Framework.dll</HintPath>
     </Reference>
   </ItemGroup>
 
