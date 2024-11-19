@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  **Smart Contract Examples for the EpicChain Blockchain Platform**
+  Smart Contract Examples for the EpicChain Blockchain Platform
 </p>
 
 <p align="center">      
@@ -52,9 +52,8 @@ The **EpicChain Smart Contract Examples** repository aims to:
 For further information on EpicChain and smart contract development, explore the following resources:
 
 - **[EpicChain Official Website](https://epic-chain.org):** Discover more about the EpicChain platform and its features.
-- **[EpicChain Documentation](https://epic-chain.org/docs):** Access comprehensive documentation on EpicChain’s development tools and capabilities.
+- **[EpicChain Documentation](https://epic-chain.org/material-ui/getting-started/):** Access comprehensive documentation on EpicChain’s development tools and capabilities.
 - **[EpicChain GitHub Repository](https://github.com/epicchainlabs):** Explore additional EpicChain-related projects and resources.
-- **[EpicChain Developer Community](https://epic-chain.org/community):** Connect with the EpicChain developer community to exchange knowledge and get support.
 
 ## License
 
